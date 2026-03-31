@@ -9,7 +9,7 @@ const Products = ({ productsPromise }) => {
   const [selectedProduct, setSelectedProduct] = useState([]);
 
   return (
-    <div className=" space-y-5 mt-5 lg:mt-12 container mx-auto">
+    <div className=" space-y-5 my-12 lg:mt-12 container mx-auto">
       <h2 className="text-4xl font-bold text-center">Premium Digital Tools</h2>
       <p className="text-center">
         Choose from our curated collection of premium digital products

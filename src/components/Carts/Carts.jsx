@@ -60,12 +60,15 @@ const Carts = ({ selectedProduct, setSelectedProduct }) => {
         <p className="text-gray-500">Total</p>
         <p className="font-bold">${totalPrice}</p>
       </div>
-      <button onClick={()=>{ if(selectedProduct.length!==0){
-        setSelectedProduct([])
-        toast.success("Checkout succesflly")
-      } 
-      }
-      } className="btn btn-block text-white bg-linear-to-r from-blue-500 to-purple-500 rounded-full">
+      <button
+        onClick={() => {
+          if (selectedProduct.length !== 0) {
+            setSelectedProduct([]);
+            toast.success("Checkout succesflly");
+          }
+        }}
+        className="btn btn-block text-white bg-linear-to-r from-blue-500 to-purple-500 rounded-full"
+      >
         Proceed to Checkout
       </button>
     </div>
