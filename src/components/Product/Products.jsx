@@ -1,10 +1,13 @@
 import React, { use, useState } from "react";
 import ProductList from "../ProductList/ProductList";
+import Carts from "../Carts/Carts";
 
 const Products = ({ productsPromise }) => {
   const cards = use(productsPromise);
 
   const [availableProducts, setAvailableProducts] = useState("Products");
+  const [selectedProduct, setSelectedProduct] = useState([]);
+  // const [productCount , setProductCount] = useState(0)
 
   return (
     <div className=" space-y-5 mt-5 lg:mt-12 container mx-auto">
@@ -17,21 +20,29 @@ const Products = ({ productsPromise }) => {
         <div className="bg-gray-100  rounded-full ">
           <button
             onClick={() => setAvailableProducts("Products")}
-            className={`px-4 py-2 ${availableProducts === "Products" ? "bg-linear-to-r from-blue-500 to-purple-500 text-white ":""} rounded-full `}
+            className={`px-4 py-2 ${availableProducts === "Products" ? "bg-linear-to-r from-blue-500 to-purple-500 text-white " : ""} rounded-full `}
           >
             Products
           </button>
 
           <button
             onClick={() => setAvailableProducts("Carts")}
-            className={` px-4 py-2  ${availableProducts === "Carts" ? "bg-linear-to-r from-blue-500 to-purple-500 text-white ":""} rounded-full `}
+            className={` px-4 py-2  ${availableProducts === "Carts" ? "bg-linear-to-r from-blue-500 to-purple-500 text-white " : ""} rounded-full `}
           >
-            Carts(0)
+            Carts({selectedProduct.length})
           </button>
         </div>
       </div>
 
-      <ProductList cards={cards}></ProductList>
+      {availableProducts === "Products" ? (
+        <ProductList
+          cards={cards}
+          selectedProduct={selectedProduct}
+          setSelectedProduct={setSelectedProduct}
+        ></ProductList>
+      ) : (
+        <Carts selectedProduct={selectedProduct}></Carts>
+      )}
     </div>
   );
 };
