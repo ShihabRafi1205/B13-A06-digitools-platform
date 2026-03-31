@@ -1,11 +1,8 @@
 import React from "react";
 import { FcCheckmark } from "react-icons/fc";
+import { toast } from "react-toastify";
 
-const ProductList = ({
-  cards,
-  selectedProduct,
-  setSelectedProduct,
-}) => {
+const ProductList = ({ cards, selectedProduct, setSelectedProduct }) => {
   console.log(cards);
 
   return (
@@ -34,8 +31,13 @@ const ProductList = ({
             <div className="mt-6">
               <button
                 onClick={() => {
-                  setSelectedProduct([...selectedProduct, card]);
-                  
+                  const isCardExists = selectedProduct.some(
+                    (product) => product.id === card.id,
+                  );
+                  if (!isCardExists) {
+                    setSelectedProduct([...selectedProduct, card]);
+                    toast("Added to cart succesfully");
+                  }
                 }}
                 className="btn btn-primary rounded-full btn-block"
               >

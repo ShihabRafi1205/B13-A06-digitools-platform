@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Achievement from "./components/Achievement/Achievement";
 import Banner from "./components/Banner/Banner";
@@ -22,6 +23,9 @@ function App() {
       >
         <Products productsPromise={productsPromise}></Products>
       </Suspense>
+
+
+      <ToastContainer />
     </>
   );
 }

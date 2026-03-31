@@ -7,7 +7,6 @@ const Products = ({ productsPromise }) => {
 
   const [availableProducts, setAvailableProducts] = useState("Products");
   const [selectedProduct, setSelectedProduct] = useState([]);
-  // const [productCount , setProductCount] = useState(0)
 
   return (
     <div className=" space-y-5 mt-5 lg:mt-12 container mx-auto">
@@ -41,7 +40,10 @@ const Products = ({ productsPromise }) => {
           setSelectedProduct={setSelectedProduct}
         ></ProductList>
       ) : (
-        <Carts selectedProduct={selectedProduct}></Carts>
+        <Carts
+          selectedProduct={selectedProduct}
+          setSelectedProduct={setSelectedProduct}
+        ></Carts>
       )}
     </div>
   );
