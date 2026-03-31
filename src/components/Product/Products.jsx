@@ -1,9 +1,10 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import ProductList from "../ProductList/ProductList";
 
 const Products = ({ productsPromise }) => {
   const cards = use(productsPromise);
-  console.log(cards);
+
+  const [availableProducts, setAvailableProducts] = useState("Products");
 
   return (
     <div className=" space-y-5 mt-5 lg:mt-12 container mx-auto">
@@ -12,10 +13,25 @@ const Products = ({ productsPromise }) => {
         Choose from our curated collection of premium digital products
         designedto <br /> boost your productivity and creativity.
       </p>
-  
-        <ProductList cards={cards}></ProductList>
-    
-      
+      <div className="flex justify-center items-center ">
+        <div className="bg-gray-100  rounded-full ">
+          <button
+            onClick={() => setAvailableProducts("Products")}
+            className={`px-4 py-2 ${availableProducts === "Products" ? "bg-linear-to-r from-blue-500 to-purple-500 text-white ":""} rounded-full `}
+          >
+            Products
+          </button>
+
+          <button
+            onClick={() => setAvailableProducts("Carts")}
+            className={` px-4 py-2  ${availableProducts === "Carts" ? "bg-linear-to-r from-blue-500 to-purple-500 text-white ":""} rounded-full `}
+          >
+            Carts(0)
+          </button>
+        </div>
+      </div>
+
+      <ProductList cards={cards}></ProductList>
     </div>
   );
 };
