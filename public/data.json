@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Pro Resume Builder",
+    "description": "Create professional resumes with AI-powered suggestions.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "../src/assets/products/writing_2327400 1.png"
+  },
+  {
+    "id": 2,
+    "name": "AI Logo Generator",
+    "description": "Generate stunning logos instantly using AI.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": ["High-resolution logos", "Custom colors", "Instant download"],
+    "icon": "../src/assets/products/social-media.png"
+  },
+  {
+    "id": 3,
+    "name": "Social Media Scheduler",
+    "description": "Plan and automate your social media posts.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Auto posting",
+      "Analytics dashboard",
+      "Multi-platform support"
+    ],
+    "icon": "../src/assets/products/portfolio.png"
+  },
+  {
+    "id": 4,
+    "name": "Website Builder Pro",
+    "description": "Build responsive websites without coding.",
+    "price": 49,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Drag & drop builder", "Free hosting", "SEO tools"],
+    "icon": "../src/assets/products/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "AI Content Writer",
+    "description": "Generate high-quality blog and marketing content.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "SEO optimized content",
+      "Multiple languages",
+      "Fast generation"
+    ],
+    "icon": "../src/assets/products/design-tool.png"
+  },
+  {
+    "id": 6,
+    "name": "Email Marketing Tool",
+    "description": "Create and manage email campaigns بسهولة.",
+    "price": 20,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Email templates", "Automation", "Analytics tracking"],
+    "icon": "../src/assets/products/operation.png"
+  },
+  {
+    "id": 7,
+    "name": "UI Kit Bundle",
+    "description": "Premium UI components for faster development.",
+    "price": 39,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["500+ components", "Figma files", "Responsive design"],
+    "icon": "../src/assets/products/operation.png"
+  },
+  {
+    "id": 8,
+    "name": "Stock Image Library",
+    "description": "Access thousands of high-quality images.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Unlimited downloads", "HD quality", "Commercial use"],
+    "icon": "../src/assets/products/Group 7.png"
+  }
+]

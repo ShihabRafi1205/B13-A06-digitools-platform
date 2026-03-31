@@ -4,8 +4,8 @@ import { IoPlayOutline } from "react-icons/io5";
 
 const Banner = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen justify-around">
-      <div className="hero-content flex gap-20 flex-col lg:flex-row-reverse">
+    <div className="hero mt-8 md:mb-8 lg:min-h-screen">
+      <div className="hero-content flex lg:gap-24 flex-col lg:flex-row-reverse">
         <img src={BannerImg} className="max-w-sm rounded-lg w-full" />
         <div>
           <h1 className="text-5xl font-bold">
