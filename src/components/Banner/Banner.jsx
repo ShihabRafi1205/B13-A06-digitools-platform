@@ -8,7 +8,7 @@ const Banner = () => {
       <div className="hero-content flex lg:gap-24 flex-col lg:flex-row-reverse">
         <img src={BannerImg} className="max-w-sm rounded-lg w-full" />
         <div>
-          <div className="text-sm bg-[#E1E7FF] rounded-full p-1.5 px-3 flex inline-flex justify-center items-center gap-2 mb-5">
+          <div className="text-sm bg-[#E1E7FF] rounded-full p-1.5 px-3 inline-flex justify-center items-center gap-2 mb-5">
             <img src={imgTooltip} alt="" />{" "}
             <span className="bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               New: AI-Powered Tools Available

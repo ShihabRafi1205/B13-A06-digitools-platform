@@ -4,8 +4,8 @@ import Achievement from "./components/Achievement/Achievement";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Product/Products";
-import { Suspense } from "react";
-import Step from "./components/Steps/Step";
+import { Suspense, useMemo, useState } from "react";
+// import Step from "./components/Steps/Step";
 
 const fetchProducts = async () => {
   const res = await fetch("/data.json");
@@ -13,19 +13,24 @@ const fetchProducts = async () => {
 };
 
 function App() {
-  const productsPromise = fetchProducts();
+
+  const [selectedProduct, setSelectedProduct] = useState([]);
+  const productsPromise = useMemo(() => fetchProducts(), []);
+  
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar selectedProduct={selectedProduct}></Navbar>
       <Banner></Banner>
       <Achievement></Achievement>
       <Suspense
-        fallback={<span className="loading loading-spinner loading-lg"></span>}
+        fallback={<span className="loading loading-spinner loading-lg "></span>}
       >
-        <Products productsPromise={productsPromise}></Products>
+        <Products
+          productsPromise={productsPromise}
+          selectedProduct={selectedProduct}
+          setSelectedProduct={setSelectedProduct}
+        ></Products>
       </Suspense>
-
-      
 
       <ToastContainer />
     </>
