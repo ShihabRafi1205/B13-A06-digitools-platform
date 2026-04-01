@@ -25,7 +25,7 @@ function App() {
         <Products productsPromise={productsPromise}></Products>
       </Suspense>
 
-      <Step></Step>
+      
 
       <ToastContainer />
     </>

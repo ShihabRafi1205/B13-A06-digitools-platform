@@ -1,6 +1,10 @@
 import React, { use, useState } from "react";
 import ProductList from "../ProductList/ProductList";
 import Carts from "../Carts/Carts";
+import Step from "../Steps/Step";
+import Pricing from "../Pricing/Pricing";
+import Footer from "../Footer/Footer";
+
 
 const Products = ({ productsPromise }) => {
   const cards = use(productsPromise);
@@ -34,11 +38,16 @@ const Products = ({ productsPromise }) => {
       </div>
 
       {availableProducts === "Products" ? (
+        <>
         <ProductList
           cards={cards}
           selectedProduct={selectedProduct}
           setSelectedProduct={setSelectedProduct}
         ></ProductList>
+        <Step></Step>
+        <Pricing></Pricing>
+        <Footer></Footer>
+        </>
       ) : (
         <Carts
           selectedProduct={selectedProduct}
