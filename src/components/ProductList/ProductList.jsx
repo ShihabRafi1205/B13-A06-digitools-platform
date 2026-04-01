@@ -18,7 +18,7 @@ const ProductList = ({ cards, selectedProduct, setSelectedProduct }) => {
               <h2 className="text-3xl font-bold">{card.name}</h2>
             </div>
             <p>{card.description}</p>
-            <h4 className="text-left font-bold text-xl">{card.price}</h4>
+            <h4 className="text-left font-bold text-xl">${card.price} <span className="text-sm text-gray-400">/{card.period}</span> </h4>
             <ul className="mt-6 flex flex-col gap-2 text-xs">
               {card.features.map((feature, index) => {
                 return (
