@@ -2,7 +2,7 @@ import React from "react";
 
 const Pricing = () => {
   return (
-    <div className="grid grid-cols-3 gap-6 mt-12  mx-auto  w-[80%] items-stretch">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12  mx-auto  w-[80%] items-stretch">
       <div className="card bg-base-100 shadow-sm">
         <div className="card-body">
         <div className="space-y-4">
@@ -93,7 +93,7 @@ const Pricing = () => {
       
       <div className="card relative bg-base-100 shadow-sm bg-linear-to-r from-blue-500 to-purple-500 text-white">
 
-        <span className="badge badge-xs p-2.5 rounded-full bg-[#FEF3C6] absolute left-40 -top-2">Most Popular</span>
+        <span className="badge badge-xs p-2.5 rounded-full bg-[#FEF3C6] absolute left-27 -top-2.5 lg:left-40 lg:-top-2.5">Most Popular</span>
         <div className="card-body">
         <div className="space-y-4">
             <div>

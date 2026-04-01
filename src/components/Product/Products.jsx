@@ -13,6 +13,7 @@ const Products = ({ productsPromise }) => {
   const [selectedProduct, setSelectedProduct] = useState([]);
 
   return (
+    <>
     <div className=" space-y-5 my-12 lg:mt-12 container mx-auto">
       <h2 className="text-4xl font-bold text-center">Premium Digital Tools</h2>
       <p className="text-center">
@@ -46,7 +47,7 @@ const Products = ({ productsPromise }) => {
         ></ProductList>
         <Step></Step>
         <Pricing></Pricing>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
         </>
       ) : (
         <Carts
@@ -55,6 +56,8 @@ const Products = ({ productsPromise }) => {
         ></Carts>
       )}
     </div>
+    {availableProducts === "Products" && <Footer />}
+    </>
   );
 };
 
